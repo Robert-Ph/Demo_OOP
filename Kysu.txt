@@ -1,0 +1,15 @@
+public class Kysu extends QLCB {
+    String nganh;
+
+    public Kysu(String nganh, String name, int age, String sex, String address) {
+        super(name, age, sex, address);
+        // TODO Auto-generated constructor stub
+        this.nganh = nganh;
+    }
+
+    public String toString() {
+        return "Ten: " + name + "; Tuoi: " + age + "; Gioi tinh: " + sex + "; Dia chi: " + address + "; nganh: "
+                + nganh;
+    }
+
+}

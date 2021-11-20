@@ -1,0 +1,13 @@
+public class Worker extends QLCB {
+    int bac;
+
+    public Worker(int bac, String name, int age, String sex, String address) {
+        super(name, age, sex, address);
+        // TODO Auto-generated constructor stub
+        this.bac = bac;
+    }
+
+    public String toString() {
+        return "Ten: " + name + "; Tuoi: " + age + "; Gioi tinh: " + sex + "; Dia chi: " + address + "; Bac: " + bac;
+    }
+}

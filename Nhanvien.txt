@@ -1,0 +1,13 @@
+public class Nhanvien extends QLCB {
+    String congviec;
+
+    public Nhanvien(String congviec, String name, int age, String sex, String address) {
+        super(name, age, sex, address);
+        // TODO Auto-generated constructor stub
+        this.congviec = congviec;
+    }
+
+    public String toString() {
+        return "Ten: " + name + "; Tuoi: " + age + "; Gioi tinh: " + sex + "; Dia chi: " + address + "; Cong viec: "
+                + congviec;
+    }

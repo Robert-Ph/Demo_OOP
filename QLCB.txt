@@ -1,0 +1,54 @@
+public abstract class QLCB {
+    String name;
+    int age;
+    String sex;
+    String address;
+
+    public QLCB(String name, int age, String sex, String address) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.address = address;
+    }
+
+    public static String seach(Worker[] arr1, Kysu[] arr2, Nhanvien[] arr3, String name) {
+        String result = "";
+        for (Nhanvien nhanvien : arr3) {
+            if (nhanvien.name.equals(name)) {
+                result += nhanvien + "\n";
+            }
+        }
+        for (Worker worker : arr1) {
+            if (worker.name.equals(name)) {
+                result += worker + "\n";
+            }
+        }
+        for (Kysu kysu : arr2) {
+            if (kysu.name.equals(name)) {
+                result += kysu + "\n";
+            }
+
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Worker w1 = new Worker(3, "Huy", 20, "nam", "HCM");
+        Worker w2 = new Worker(5, "Ha", 24, "Nu", "HCM");
+        Worker w3 = new Worker(1, "Tuan", 18, "nam", "HCM");
+
+        Kysu k1 = new Kysu("QTKD", "Ngoc", 25, "Nu", "HN");
+        Kysu k2 = new Kysu("QTKD", "Nam", 29, "Nam", "HN");
+        Kysu k3 = new Kysu("QTKD", "Lan", 25, "Nu", "HN");
+
+        Nhanvien n1 = new Nhanvien("***", "Tuan", 30, "Nam", "HCM");
+        Nhanvien n2 = new Nhanvien("***", "Thuy", 40, "Nu", "HCM");
+        Nhanvien n3 = new Nhanvien("***", "Phuong", 35, "Nam", "HCM");
+
+        Worker[] arr1 = { w1, w2, w3 };
+        Kysu[] arr2 = { k1, k2, k3 };
+        Nhanvien[] arr3 = { n1, n2, n3 };
+
+        System.out.println(QLCB.seach(arr1, arr2, arr3, "Tuan"));
+    }
+}
